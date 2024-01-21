@@ -1,0 +1,7 @@
+{
+  "name": "hannibalfront",
+  "displayName": "hannibalfront",
+  "plugins": [
+    "expo-font"
+  ]
+}
