@@ -1,0 +1,49 @@
+.flex {
+  display: flex
+}
+
+.rounded-full {
+  border-radius: 9999px
+}
+
+.rounded-lg {
+  border-radius: 0.5rem
+}
+
+.border-2 {
+  border-width: 2px
+}
+
+.border-blue-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(191 219 254 / var(--tw-border-opacity))
+}
+
+.bg-blue-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 219 254 / var(--tw-bg-opacity))
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem
+}
+
+.font-semibold {
+  font-weight: 600
+}
+
+.text-blue-600 {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity))
+}
+
+.text-blue-800 {
+  --tw-text-opacity: 1;
+  color: rgb(30 64 175 / var(--tw-text-opacity))
+}

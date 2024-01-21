@@ -10,6 +10,9 @@ import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 
+import {TailwindProvider} from 'tailwind-rn';
+import utilities from './tailwind.json';
+
 import AddRecipe from "./screens/addRecipe/AddRecipe";
 
 function HomeScreen() {
@@ -32,11 +35,13 @@ const Tab = createMaterialBottomTabNavigator();
 
 export default function App() {
   return (
+<TailwindProvider utilities={utilities}>
     <NavigationContainer>
       <Tab.Navigator>
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Add Recipe" component={AddRecipe} />
       </Tab.Navigator>
     </NavigationContainer>
+</TailwindProvider>
   );
 }
