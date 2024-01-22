@@ -6,14 +6,16 @@
  */
 import SafeAreaView from 'react-native-safe-area-view';
 import * as React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View , StatusBar} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-
 import {TailwindProvider} from 'tailwind-rn';
 import utilities from './tailwind.json';
 
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+
 import AddRecipe from "./screens/addRecipe/AddRecipe";
+import ListRecipe from "./screens/listRecipe/ListRecipe";
 
 function HomeScreen() {
   return (
@@ -37,9 +39,20 @@ export default function App() {
   return (
 <TailwindProvider utilities={utilities}>
     <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Add Recipe" component={AddRecipe} />
+        <StatusBar backgroundColor="#F7F7F8" barStyle="dark-content" />
+      <Tab.Navigator
+  activeColor="#EA580C"
+  inactiveColor="#999DAD"
+  barStyle={{ backgroundColor: '#F7F7F8' }}
+      >
+        <Tab.Screen name="Home" component={ListRecipe}
+        options={{
+          tabBarLabel: 'Home',
+
+        }}
+        />
+        <Tab.Screen name="Add Recipe" component={AddRecipe}
+        />
       </Tab.Navigator>
     </NavigationContainer>
 </TailwindProvider>

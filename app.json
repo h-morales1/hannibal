@@ -3,5 +3,15 @@
   "displayName": "hannibalfront",
   "plugins": [
     "expo-font"
-  ]
+  ],
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "c61a5d40-17e3-42c3-9d40-c2074ac2e61d"
+      }
+    },
+    "plugins": [
+      "expo-font"
+    ]
+  }
 }
